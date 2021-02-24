@@ -1,0 +1,54 @@
+body {
+    background: url(../assets/images/map.jpg);
+    background-size: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+@keyframes blink {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+.cord {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    height: 0;
+    width: 0;
+    transform: translate(-7px, -5px);
+}
+.cord_contnent {
+    position: relative;
+}
+.cord_contnent > .dot {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: lightcoral;
+    border: 1px solid black;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+}
+
+.cord_contnent > .text {
+    font-size: small;
+    position: absolute;
+    top: 10px;
+}
